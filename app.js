@@ -37,5 +37,5 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(PORT, function() {
-  console.log(`listening on ${PORT}`)
+  console.log(`listening on port ${PORT}`);
 });

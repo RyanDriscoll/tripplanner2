@@ -10,7 +10,7 @@ module.exports = router;
 router.get('/', function(req, res, next) {
   Promise.all([Hotel.findAll(), Restaurant.findAll(), Activity.findAll()])
   .spread(function(hotels, rests, acts) {
-    res.json({ hotels: hotels, restaurants: rests, activities: acts});
+    res.render('../views', { hotels: hotels, restaurants: rests, activities: acts});
     // res.render("./views", { hotels: hotels, restaurants: rests, activities: acts})
   })
 })
